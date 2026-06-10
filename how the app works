@@ -1,0 +1,205 @@
+1. the app will first give you a list of all buses that will pass at the busstop start and will finish at you end location.
+  
+  example :
+
+  {
+      "RouteId": 62,
+      "JourneyTypeId": 1,
+      "TripNumber": 5,
+      "VehicleId": 504,
+      "VehicleCode": "9129DC14\r\nRoute: 197 (PLV-RDGALLET)",
+      "Make": "NISSAN SP210",
+      "VehicleTypeName": "NORMAL",
+      "SeatingCapacity": 65,
+      "StandingCapacity": 0,
+      "StartTime": "2026-06-05T17:33:41",
+      "EndTime": "2026-06-05T19:41:47",
+      "StartingStageName": "PORT LOUIS VICTORIA",
+      "StartingStageShortName": "PLV",
+      "EndingStageName": "RIVIERE DES GALLETS",
+      "EndingStageShortName": "RDGALLET",
+      "ExpectedTimeAtCurrentLocation": "2026-06-05T18:51:46",
+      "ExpectedTimeAtDestinationLocation": "2026-06-05T19:12:02",
+      "NumberOfPassenterInBus": 8,
+      "BusFares": null
+}
+it can give you multiple buses and you can see the buses 's : expected arrival time at ecah future bus stop ( very bad in long and medium term prediction), time at which they passed a bus stop and
+  number of passengers in bus. 
+  
+  About the "number of pasengers" prediction, my analysis is : its not 100% good, mybe 10-20% margin error. It does not work through visual machine learning but phehaps the palmtec ticket printer is connected to the gnss trasnmitter modem.
+Unlike private buses,  CNT condutors put students and 3iem age's start and end location in the palmtec system so this is plaussable.The palmtec is sold by Softland india ltd (https://www.palmtec.co.in/palmtec-amphibia.php)
+   and features GPRS Module for IOT or wifi/bluetooth with  custom programmble firmware by manufacturer.So should be pretty 'okay' accuracy overall.
+
+2. then you click on each bus " see more " to see time at whcih they passed ecah bus stop. The app makes another api call with that bus detail.
+  example: 
+  Status Code: 200
+{
+  "StatusReturn": {
+    "Message": "Buses with Stages Retrieved Successfully",
+    "Status": 1
+  },
+  "ResponseData": {
+    "RouteId": 35,
+    "RouteNumber": "6A",
+    "RouteName": "CPE-RDG",
+    "ServiceTypeId": 1,
+    "ServiceTypeName": "NORMAL",
+    "NumberOfBusStops": 66,
+    "TripCurrentDateTime": "2026-06-05T15:41:42",
+    "TripCurrentLongitude": 57.5669,
+    "TripCurrentLatitude": -20.44865,
+    "NumberOfSeatsAvailable": 52,
+    "VehicleCode": "7836DC11",
+    "VehicleMake": "NISSAN SP210",
+    "SeatingCapacity": 64,
+    "StandingCapacity": 5,
+    "CurrentLocation": "",
+    "VehicleStageDetails": [
+      {
+        "StageSLNumber": 1,
+        "StageId": 65,
+        "StageName": "CUREPIPE SOUTH",
+        "StageCode": "CPE S",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:17:27",
+        "IsGPSTrackMissed": 1,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:17:27",
+        "ActualDateTime": "2026-06-05T19:17:27",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 2,
+        "StageId": 824,
+        "StageName": "KFC CUREPIPE",
+        "StageCode": "KFCCPE",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:19:27",
+        "IsGPSTrackMissed": 1,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:19:27",
+        "ActualDateTime": "2026-06-05T19:19:27",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 3,
+        "StageId": 916,
+        "StageName": "MAURITIUS TELECOM CUREPIPE",
+        "StageCode": "MTELCMCPE",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:20:27",
+        "IsGPSTrackMissed": 1,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:20:27",
+        "ActualDateTime": "2026-06-05T19:20:27",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 4,
+        "StageId": 124,
+        "StageName": "FOREST SIDE POST OFFICE",
+        "StageCode": "FSIDE",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:21:27",
+        "IsGPSTrackMissed": 0,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:21:27",
+        "ActualDateTime": "2026-06-05T19:18:49",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 5,
+        "StageId": 574,
+        "StageName": "CAMP BOMBAYE BUS STOP",
+        "StageCode": "CMPBOMBAY",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:22:27",
+        "IsGPSTrackMissed": 0,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:19:49",
+        "ActualDateTime": "2026-06-05T19:20:14",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 6,
+        "StageId": 126,
+        "StageName": "XVI MILLE",
+        "StageCode": "XVIMILE",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:23:27",
+        "IsGPSTrackMissed": 0,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:21:14",
+        "ActualDateTime": "2026-06-05T19:21:40",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 7,
+        "StageId": 125,
+        "StageName": "CORLIS",
+        "StageCode": "CORLIS",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:24:27",
+        "IsGPSTrackMissed": 0,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:22:40",
+        "ActualDateTime": "2026-06-05T19:23:40",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 8,
+        "StageId": 411,
+        "StageName": "16EME MILE PADMA SUPERMARKET",
+        "StageCode": "XVISUPMRKT",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:25:27",
+        "IsGPSTrackMissed": 0,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:24:40",
+        "ActualDateTime": "2026-06-05T19:25:17",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+      },
+      {
+        "StageSLNumber": 9,
+        "StageId": 127,
+        "StageName": "LA PEYRE HILL",
+        "StageCode": "LAPEYRE",
+        "IsFareStage": 1,
+        "ScheduledDateTime": "2026-06-05T19:26:27",
+        "IsGPSTrackMissed": 0,
+        "IsArrived": 1,
+        "ExpectedDateTime": "2026-06-05T19:26:17",
+        "ActualDateTime": "2026-06-05T19:26:47",
+        "Longitude": 0.0,
+        "Latitude": 0.0,
+        "Altitude": 0.0
+.
+      .
+      .
+      ..
+      .
+      .
+      ..
+          .
+          .
+          .
+          .
+
+     ........  and it goes on to all bus stops........
+  
