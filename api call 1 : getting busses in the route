@@ -6,8 +6,8 @@ url_tracking = "hidden for ethical reasons"
 
 headers = {
     "Content-Type": "application/json; charset=utf-8",
-    "Host": "108.181.34.86",
-    "User-Agent": "Dart/3.3 (dart:io)"
+    "Host": " hidden",
+    "User-Agent": "hidden"
 }
 
 # Use the exact IDs  for your specific bus stops
