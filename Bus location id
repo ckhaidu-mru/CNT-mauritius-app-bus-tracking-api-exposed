@@ -1,0 +1,142 @@
+the api calls needs bus stops id, the following were extrated from the app interception( I will not show all here): 
+
+"{
+"StatusReturn": {
+"Message": "Stages Retrieved Successfully",
+"Status": 1
+},
+"ResponseData": [
+{
+"StageId": 85,
+"ShortName": "GROS BILLOT",
+"StageName": "GROS BILLOT",
+"AliasName": "GROS BILLOT",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 95,
+"ShortName": "CAMP FOUQUEREAUX ROUND ABOUT ",
+"StageName": "CAMP FOUQUEREAUX ROUND ABOUT TOWARDS RIV DES GALET",
+"AliasName": "CAMP FOUQUEREAUX ROUND ABOUT ",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 96,
+"ShortName": "WOOTUN",
+"StageName": "WOOTUN",
+"AliasName": "WOOTUN",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 100,
+"ShortName": "UNION PARK ROUND ABOUT ",
+"StageName": "UNION PARK ROUND ABOUT TOWARDS RIV DES GALETS",
+"AliasName": "UNION PARK ROUND ABOUT ",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 114,
+"ShortName": "SURINAM LOTUS",
+"StageName": "SURINAM LOTUS TOWARDS RIV DES GALETS",
+"AliasName": "SURINAM LOTUS",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 120,
+"ShortName": "CHAMOUNY ",
+"StageName": "CHAMOUNY ",
+"AliasName": "CHAMOUNY ",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 175,
+"ShortName": "POINTE AUX ROCHES",
+"StageName": "POINTE AUX ROCHES",
+"AliasName": "POINTE AUX ROCHES",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 316,
+"ShortName": "SHOPRITE",
+"StageName": "SHOPRITE",
+"AliasName": "SHOPRITE",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 370,
+"ShortName": "BRITANNIA ",
+"StageName": "BRITANNIA TOWARDS RDG",
+"AliasName": "BRITANNIA ",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 385,
+"ShortName": "CAMP DIABLE BAKERY",
+"StageName": "CAMP DIABLE BAKERY",
+"AliasName": "CAMP DIABLE BAKERY",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 387,
+"ShortName": "CAMP DIABLE KOVIL",
+"StageName": "CAMP DIABLE KOVIL",
+"AliasName": "CAMP DIABLE KOVIL",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 388,
+"ShortName": "CAMP DIABLE MOSQUE ",
+"StageName": "CAMP DIABLE MOSQUE TOWARDS BATIMARAIS",
+"AliasName": "CAMP DIABLE MOSQUE ",
+"Distance": 0,
+"Latitude": 0,
+"Longitude": 0,
+"Altitude": 0
+},
+{
+"StageId": 428,
+"ShortName": "EBENE HEIGHTS",
+"StageName": "EBENE HEIGHTS ",
+"AliasName": "EBENE HEIGHTS",
+.
+.
+.
+.
+.
+.
+.
+.
+. and it goes on for nearly 192 bus stops.
