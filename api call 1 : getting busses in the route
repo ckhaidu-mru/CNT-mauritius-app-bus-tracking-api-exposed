@@ -1,0 +1,49 @@
+import requests
+import json
+
+
+url_tracking = "hidden for ethical reasons"
+
+headers = {
+    "Content-Type": "application/json; charset=utf-8",
+    "Host": "108.181.34.86",
+    "User-Agent": "Dart/3.3 (dart:io)"
+}
+
+# Use the exact IDs  for your specific bus stops
+FROM_STOP_ID = "1416"  # Passed as a string 
+TO_STOP_ID = 1503      # Passed as an integer 
+
+payload = {
+    "Credentials": {
+        "Latitude": "0.0",
+        "Longitude": "0.0",
+        "Altitude": "0.0",
+        "DeviceID": None,
+        "IMEI": 0,
+        "UserID": 0,
+        "ServiceName": "CustomerLogin",
+        "TokenID": "",
+        "BluetoothID": "",
+        "IsZipped": 0,
+        "SendStatus": 0,
+        "ApkType": None,
+        "DeviceNotificationID": ""
+    },
+    "RequestData": {
+        "FromStageId": FROM_STOP_ID,
+        "ToStageId": TO_STOP_ID
+    }
+}
+
+try:
+    print("📡 Fetching live tracking data from NTC Server...")
+    response = requests.post(url_tracking, json=payload, headers=headers, timeout=15)
+
+    print(f"Status Code: {response.status_code}")
+
+    # This will now print the live positions of the fleet!
+    print(json.dumps(response.json(), indent=2))
+
+except Exception as e:
+    print(f"❌ Connection failed: {e}")
