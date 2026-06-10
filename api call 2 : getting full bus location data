@@ -1,0 +1,45 @@
+import requests
+import json
+
+url_track = "hidden for ethical reasons"
+
+headers = {
+    "Content-Type": "application/json; charset=utf-8",
+    "Host": " hidden",
+    "User-Agent": "hidden"
+}
+
+
+payload = {
+    "Credentials": {
+        "Latitude": "0.0",
+        "Longitude": "0.0",
+        "Altitude": "0.0",
+        "DeviceID": None,
+        "IMEI": 0,
+        "UserID": 0,
+        "ServiceName": "CustomerLogin",
+        "TokenID": "",
+        "BluetoothID": "",
+        "IsZipped": 0,
+        "SendStatus": 0,
+        "ApkType": None,
+        "DeviceNotificationID": ""
+    },
+    "RequestData": {
+        "RouteId": 35,
+        "JourneyTypeId": 1,
+        "TripNumber": 4,
+        "VehicleId": 476
+    }
+}
+
+try:
+    print("📡 Requesting detailed stop-by-stop timeline for Vehicle 476...")
+    response = requests.post(url_track, json=payload, headers=headers, timeout=15)
+
+    print(f"Status Code: {response.status_code}")
+    print(json.dumps(response.json(), indent=2))
+
+except Exception as e:
+    print(f"❌ Connection failed: {e}")
